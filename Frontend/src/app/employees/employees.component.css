@@ -1,0 +1,12 @@
+thead{
+    color:blue;
+    font-size: 1.5em;
+}
+.bg-pic{
+    background-image: url('/assets/images/2.jpg');
+}
+tbody{
+    color: #fafafa !important;
+    font-size: 1.25em;
+    font-weight: normal;
+}

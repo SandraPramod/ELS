@@ -1,0 +1,24 @@
+<p>Employee ID: {{empid}}</p>
+<div class="container">
+    <div class="row">
+        <div class="col-9">
+            <table class='table table-responsive table-hover'>
+                <thead>
+                    <tr>
+                        <th>Log In Times</th>
+                        <th>Log Out Times</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor='let log of loghistory'>
+
+                        <td>{{ log[0] }}</td>
+                        <td>{{ log[1] }}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

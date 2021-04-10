@@ -1,0 +1,29 @@
+
+#mark{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+}
+h1 {
+    font-family:cursive;
+    font-size: 2.5em;
+}
+h1{
+    color:maroon;
+    text-decoration: underline;
+}
+#bg {
+    /* The image used */
+    background-image: url("../assets/images/2.jpg");
+    /* Full height */
+    height: 100%;
+    /* Center and scale the image nicely */
+    color: red;
+    font-weight: bolder;
+    background-size: 100% ;  
+    background-size: cover; 
+  }
+  a{
+      font-size: 1.25em;
+      text-decoration: underline;
+  }

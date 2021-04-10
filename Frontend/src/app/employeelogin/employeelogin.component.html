@@ -1,0 +1,15 @@
+<div class="container">
+    <h5 *ngIf="invalidId">Invalid Employee Id</h5><br>
+    <form (ngSubmit)="submit()">
+        <input class="form-control" type="text" placeholder="Enter Employee Id" name="id" [(ngModel)]="emp_id"><br>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+
+    <div class="row" *ngIf="verified">
+        <h3 *ngIf="loginstatus">Logged In</h3>
+        <h3 *ngIf="!loginstatus">Logged Out</h3>
+        <p>Name: {{employee.Name}}</p>
+        <p>Designation: {{employee.Designation}}</p>
+    </div>
+
+</div>

@@ -1,0 +1,52 @@
+<div class='card'>
+    <form (ngSubmit)="editEmployee()" class='bg-pic'>
+<div class='card-header' style="color: blue; font-size: 1.5em;">
+ Edit Employee
+</div>
+<div class='card-body'>            
+  <div class='table-responsive'>
+    <table class='table'>       
+    
+      <tbody>  
+          <tr>
+              <td> <label>Employee Id</label></td>
+              <td><input type="text" name="e_id"  [(ngModel)]="employeeItem.empId"/></td>                  
+            </tr>   
+            <tr>
+                <td><label>Employee Name</label></td>
+                <td><input type="text" name="e_name" [(ngModel)]="employeeItem.Name"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Designation</label></td>
+                <td><input type="text" name="e_designation" [(ngModel)]="employeeItem.Designation"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Gender</label></td>
+                <td><input type="text" name="e_gender" [(ngModel)]="employeeItem.Gender"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Address</label></td>
+                <td><input type="text" name="e_address" [(ngModel)]="employeeItem.Address"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>Age</label></td>
+                <td><input type="text" name="e_age" [(ngModel)]="employeeItem.Age"/></td>                  
+              </tr>  
+              <tr>
+                <td> <label>Salary</label></td>
+                <td><input type="text" name="e_salary" [(ngModel)]="employeeItem.Salary"/></td>                  
+              </tr>  
+              <tr>
+                <td><label>Employee imageUrl</label></td>
+                <td><input type="text" name="e_image" [(ngModel)]="employeeItem.imageUrl"/></td>                  
+              </tr>  
+              <tr>
+                <td></td>
+                <td><input type="submit" value="Submit" /></td>                  
+              </tr>             
+      </tbody>
+    </table>
+  </div>
+</div>
+</form>
+</div>

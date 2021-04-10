@@ -1,0 +1,13 @@
+.bg-pic{
+    background-image: url('/assets/images/2.jpg');
+}
+*{
+    color: black;
+    font-weight: bold;
+    font-size: 1.01em;
+}
+label{
+    color: wheat;
+    font-size: 1.25em;
+    font-weight: normal;
+}

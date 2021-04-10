@@ -1,0 +1,54 @@
+<div class='card'>
+    <div class='card-header' style="font-size: 1.5em;">
+     {{pageTitle}}
+    </div>
+    
+    <div class='card-body'>            
+      <div class='table table-responsive table-hover'>
+        <table class='table bg-pic'
+              *ngIf = 'employees && employees.length'>
+          <thead>
+            <tr>
+              <th>
+                <button class='btn btn-primary'
+                (click)='toggleImage()'>
+                  {{showImage? 'Hide' : 'Show'}} Image
+                </button>
+              </th>
+              <th>Name</th>
+              <th>Designation</th>
+              <th>Gender</th>
+              <th>Age</th>
+              <th>Salary</th>
+              <th>Log History</th>
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let employee of employees'>
+                  <td><img *ngIf='showImage'
+                    [src] = 'employee.imageUrl' 
+                    [title] = 'employee.Name'
+                    [style.width.px] = 'imageWidth' 
+                    [style.margin.px] = 'imageMargin'></td>
+                  <td>{{ employee.Name|uppercase }}</td>
+                  <td>{{ employee.Designation }}</td>
+                  <td>{{ employee.Gender }}</td>
+                  <td>{{ employee.Age }}</td>
+                  <td>{{ employee.Salary }}</td>
+                  <td>
+                    <button class="btn btn-info" style="cursor:pointer" *ngIf="_auth.loggedIn()" routerLink="view/{{employee.empId}}" style="margin-left: 20px;"> View</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.loggedIn()" (click)="editEmployee(employee)" style="margin-left: 20px;"> Edit</button>
+                  </td>
+                  <td>
+                    <button class="btn btn-danger" style="cursor:pointer" *ngIf="_auth.loggedIn()"(click)="deleteEmployee(employee)"> Delete</button>
+                  </td>
+                </tr>              
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
